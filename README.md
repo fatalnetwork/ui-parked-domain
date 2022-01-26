@@ -40,7 +40,7 @@ $title-font-color: #ffffff;
 $title-font-size: 24px;
 ```
 
-after changing the style, render the style.css file and replace the new "style.css" and "style.css.map" files in the "/public/style" folder with the existing files.
+after changing the style, render the style.css file and replace the new "style.css" file in the "/public/style" folder with the existing file.
 
 ### Set the content
 
