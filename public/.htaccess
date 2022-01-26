@@ -1,0 +1,35 @@
+# server options
+SetEnv SERVER_ADMIN email@domain.tld
+Options -ExecCGI
+#DirectoryIndex index.php
+AddHandler php-cgi .php
+AddDefaultCharset UTF-8
+DefaultType text/html
+ServerSignature Off
+DefaultLanguage de-DE
+
+# Rewrite Engine
+RewriteEngine on
+
+# https redirect
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://domain.tld%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} !^domain\.tld$ [NC]
+RewriteRule (.*) https://domain.tld%{REQUEST_URI} [R=301,L]
+
+# exploits
+RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+RewriteRule .* index.php [F]
+
+# send all request to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA]
+
+# mod_deflate
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/xml text/html text/css text/js text/javascript text/javascript-x application/javascript application/x-javascript application/rss+xml
+</IfModule>

@@ -1,0 +1,75 @@
+# Netbeans
+nbproject/
+
+# Working Files
+*~
+
+# Eclipse
+.settings/
+.buildpath/
+.project/
+
+# VS
+.vscode
+
+# next.js
+.next/
+out/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+.pnp/
+.pnp.js
+
+# production
+build/
+
+# misc
+.DS_Store
+*.pem
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+cypress/screenshots
+cypress/videos
+
+# Personal Files
+todo
+
+# SASS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map

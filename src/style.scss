@@ -1,0 +1,33 @@
+$page-bg-color: #373f43;
+$title-font-color: #ffffff;
+$title-font-size: 24px;
+
+* {
+  box-sizing: padding-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: $title-font-size;
+  color: $title-font-color;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $page-bg-color;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

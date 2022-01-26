@@ -1,0 +1,32 @@
+* {
+  -webkit-box-sizing: padding-box;
+          box-sizing: padding-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 24px;
+  color: #ffffff;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #373f43;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+/*# sourceMappingURL=style.css.map */
